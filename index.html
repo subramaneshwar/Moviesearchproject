@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div class="navbar">
+            <a href="./index.html">
+                <h1>The Movie Search</h1>
+            </a>
+            <div class="pages">
+                <a href="index.html">Home</a>
+                <a href="search.html">Search</a>
+            </div>
+        </div>
+        <div class="searchcontainer">
+            <div class="searchbuttons">
+                <label for="">Popular</label>
+                <select id="selectinput" onchange="dropdown()">
+                    <option value="day">Today</option>
+                    <option value="This week">week</option>
+                </select>
+                <div class="buttons">
+                    <input type="radio" name="radio" id="movies" onclick="radiomovie()" checked >
+                    <label for="movies">Movies</label>
+                    <input type="radio" name="radio" id="series" onclick="radioseries()" >
+                    <label for="series">Series</label>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div id="bottom" class="bottom">
+            <div id="cards" class="cards">
+
+            </div>
+            <hr>
+            <hr>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

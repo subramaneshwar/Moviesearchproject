@@ -1,0 +1,636 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100vw;
+    background-color: black;
+    /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+    color: white;
+    overflow-x: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.maincontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navbar {
+    width: 98%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a  h2{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: white;
+}
+
+.pages {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pages a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(146, 151, 175);
+    font-weight: bold;
+}
+
+.pages a:hover {
+    color: white;
+}
+
+.searchcontainer {
+    width: 90%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.inputcontainer {
+    width: 90%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.searchinput {
+    margin-top: 2rem;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchinput .inp{
+    /* border: solid 2px red; */
+    padding-left: 10px;
+    font-size:1.4rem;
+}
+
+.inputcontainer select {
+    width: 8%;
+    height: 75%;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+.inputcontainer input {
+    width: 50%;
+    height: 75%;
+    font-size: 1.1rem;
+    outline: none;
+
+}
+
+.inputcontainer button {
+    width: 4%;
+    height: 75%;
+}
+
+.searchbuttons {
+    /* border: solid red; */
+    width: 35%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem;
+
+
+}
+
+.searchbuttons label {
+    /* border: solid red; */
+    font-size: 1.2rem;
+}
+
+.searchbuttons select {
+    width: 30%;
+    height: 75%;
+    font-size: 1.1rem;
+    /* background-color: aqua; */
+}
+
+/* .buttons{
+width: 40%;
+height: 90%;
+display: flex;
+justify-content: center;
+align-items: center;
+} */
+
+.buttons {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: #3d435d; */
+    width: 40%;
+    height: 80%;
+    border-radius: 5px;
+    box-shadow: inset 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.15);
+    border: 2px gray solid;
+}
+
+input[type="radio"] {
+    
+    appearance: none;
+    display: none;
+}
+
+.buttons label {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: linear 0.2s;
+    color: white;
+}
+
+input[type="radio"]:checked+label {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+
+
+hr {
+    width: 100%;
+    border: 1px solid rgba(234, 237, 255, .08);
+}
+
+.result {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cards {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cards a {
+    text-decoration: none;
+    color: white;
+}
+
+.poster {
+    width: 160px;
+    height: 320px;
+    margin: 1.5rem;
+    position: relative;
+    transition: transform 1s;
+    /* border: solid red; */
+
+}
+
+.poster:hover {
+    transform: scale(1.1);
+}
+
+.poster img {
+    width: 100%;
+    height: 70%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+
+
+}
+
+.imgcontent {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imgcontent h3 {
+    font-size: 15px;
+}
+
+.imgcontent small {
+    font-size: 10px;
+    color: rgb(146, 151, 175)
+}
+
+.imgcontent p {
+    font-size: 13px;
+    color: rgb(146, 151, 175)
+}
+
+.votes {
+    width: 50px;
+    height: 50px;
+    border: 3px green solid;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+
+}
+
+
+.imagecontainer {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: 100% 100%;
+}
+
+.imagesdetails {
+    width: 50%;
+    height: 50%;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.imagesdetails img {
+    width: 200px;
+    height: 250px;
+
+
+}
+
+.cardsdetails {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.percent {
+    width: 50px;
+    height: 50px;
+    border: 3px green solid;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.relase {
+    width: 40%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.title {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+
+.castcontanier {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.plot {
+    width: 55%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.plot hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cast {
+    width: 30%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* border: solid; */
+}
+
+.cast hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.castdetails {
+    width: 50%;
+    height: 16%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.castdetails img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width:480px) {
+    .navbar a h2{
+        font-size: 1.1rem;
+    }
+
+    .pages {
+        flex-direction: column;
+        width: 30%;
+    }
+
+    .pages a {
+        font-size: 1rem;
+    }
+
+    .searchcontainer {
+        justify-content: center;
+
+    }
+
+    .searchbuttons {
+        width: 90%;
+
+
+    }
+
+    .inputcontainer select {
+        width: 20%;
+        height: 70%;
+    }
+
+    .inputcontainer input {
+        width: 55%;
+        height: 70%;
+    }
+
+    .inputcontainer button {
+        width: 10%;
+        height: 70%;
+    }
+
+    .imagesdetails {
+        margin: 0;
+        width: 100%;
+
+    }
+
+    .cardsdetails {
+        width: 50%;
+        height: 100%;
+    }
+
+    .relase {
+        width: 60%;
+        height: 30%;
+
+
+    }
+
+    .title {
+        width: 100%;
+        height: 23%;
+
+
+    }
+
+    .title h2 {
+        font-size: .9rem;
+
+
+    }
+
+
+    .castcontanier {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width:481px) and (max-width:650px) {
+    .navbar a {
+        font-size: 1rem;
+    }
+
+    .pages {
+        width: 30%;
+    }
+
+    .pages a {
+        font-size: 1.1rem;
+    }
+
+    .searchcontainer {
+        justify-content: center;
+
+    }
+
+    .searchbuttons {
+        width: 80%;
+
+
+    }
+
+    .inputcontainer select {
+        width: 20%;
+        height: 70%;
+    }
+
+    .inputcontainer input {
+        width: 55%;
+        height: 70%;
+    }
+
+    .inputcontainer button {
+        width: 10%;
+        height: 70%;
+    }
+
+    .imagesdetails {
+        margin: 0;
+        width: 100%;
+
+    }
+
+    .cardsdetails {
+        width: 50%;
+        height: 70%;
+    }
+
+    .relase {
+        width: 60%;
+        height: 30%;
+
+
+    }
+
+    .title {
+        width: 80%;
+        height: 25%;
+
+
+    }
+
+    .title h2 {
+        font-size: 1.3rem;
+
+
+    }
+
+
+    .castcontanier {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width:651px) and (max-width:1020px) {
+    .navbar a {
+        font-size: 1rem;
+    }
+
+    .pages {
+        width: 30%;
+    }
+
+    .pages a {
+        font-size: 1.1rem;
+    }
+
+    .searchbuttons {
+        width: 60%;
+
+
+    }
+
+    .inputcontainer select {
+        width: 20%;
+        height: 70%;
+    }
+
+    .inputcontainer input {
+        width: 55%;
+        height: 70%;
+    }
+
+    .inputcontainer button {
+        width: 10%;
+        height: 70%;
+    }
+
+    .imagesdetails {
+        margin: 0;
+        width: 100%;
+
+    }
+
+    .cardsdetails {
+        width: 50%;
+        height: 70%;
+    }
+
+    .relase {
+        width: 60%;
+        height: 30%;
+
+
+    }
+
+    .title {
+        width: 80%;
+        height: 25%;
+
+
+    }
+
+    .title h2 {
+        font-size: 1.3rem;
+
+
+    }
+
+
+    .castcontanier {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
